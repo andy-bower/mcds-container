@@ -8,6 +8,6 @@ Having pulled the docker image I created a directory with a suitable `.muttrc` a
 set query_command="docker run -v ~/opt/mcds:/root -t quay.io/ajb85/mcds:deb12-i386 mcds %s"
 ```
 
-I'm not really sure how useful the GPG support is in this tool so I am inclined to spin a build without it to keep the size down and probably speed up invocation on this low end host.
+GPG integration and support for the man page are removed to save 10-15MB on the image size. These can be brought back in by uncommenting the relevant lines in the container definition.
 
 [![Docker Repository on Quay](https://quay.io/repository/ajb85/mcds/status "Docker Repository on Quay")](https://quay.io/repository/ajb85/mcds)
